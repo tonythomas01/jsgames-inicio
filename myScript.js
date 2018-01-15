@@ -24,13 +24,13 @@ function Player(x, y, width, height, imageSrc, color, type) {
 
     this.update = function() {
         for (var button in buttonsDown) {
-            if (button == "ArrowLeft" || button == "leftButton") {
+            if (button == "ArrowLeft" || button == "leftArrow") {
                 this.box.move(-4, 0);
             }
             else if (button == "ArrowUp" || button == "upButton") {
                 this.box.move(0, -4);
             }
-            else if (button == "ArrowRight" || button == "rightButton") {
+            else if (button == "ArrowRight" || button == "rightArrow") {
                 this.box.move(4, 0);
             }
             else if (button == "ArrowDown" || button == "downButton") {
@@ -189,8 +189,10 @@ var render = function() {
 
 window.onload = function() {
     document.body.appendChild(canvas);
-    document.body.appendChild(leftButton);
-    document.body.appendChild(rightButton);
+    document.body.appendChild(leftArrow);
+    //document.body.appendChild(leftButton);
+   // document.body.appendChild(rightButton);
+    document.body.appendChild(rightArrow);
     animateFrame(tick);
 };
 
@@ -199,10 +201,15 @@ window.onresize = function() {
 };
 
 var leftButton = document.createElement("button");
+var leftArrow = document.createElement("leftArrow");
+leftArrow.id = "leftArrow";
+
 leftButton.id = "leftButton";
 // var upButton = document.createElement("button");
 // upButton.id = "upButton";
 var rightButton = document.createElement("button");
+var rightArrow = document.createElement("rightArrow");
+rightArrow.id = "rightArrow";
 rightButton.id = "rightButton";
 // var downButton = document.createElement("button");
 // downButton.id = "downButton";
