@@ -24,13 +24,13 @@ function Player(x, y, width, height, imageSrc, color, type) {
 
     this.update = function() {
         for (var button in buttonsDown) {
-            if (button == "ArrowLeft" || button == "leftArrow") {
+            if (button == "ArrowLeft" || button == "leftButton") {
                 this.box.move(-4, 0);
             }
             else if (button == "ArrowUp" || button == "upButton") {
                 this.box.move(0, -4);
             }
-            else if (button == "ArrowRight" || button == "rightArrow") {
+            else if (button == "ArrowRight" || button == "rightButton") {
                 this.box.move(4, 0);
             }
             else if (button == "ArrowDown" || button == "downButton") {
@@ -63,17 +63,19 @@ function Box(x, y, width, height, color) {
     this.x_speed = 0;
     this.y_speed = 0;
 
+
+
     this.move = function(x, y) {
         this.x += x;
         this.y += y;
         this.x_speed = x;
         this.y_speed = y;
-        if (this.x < 0) { // hitting the left side
-            this.x = 0;
+        if (this.x < (canvas.width / 3) ) { // hitting the left side
+            this.x = (canvas.width / 3);
             this.x_speed = 0;
         }
-        else if (this.x + this.width > canvas.width) { // hitting the right side
-            this.x = canvas.width - this.width;
+        else if (this.x + this.width + 70> (canvas.width/3)*2) { // hitting the right side
+            this.x = (canvas.width/3)*2 - this.width -70;
             this.x_speed = 0;
         }
         if (this.y < 0) { // hitting the top
@@ -189,10 +191,10 @@ var render = function() {
 
 window.onload = function() {
     document.body.appendChild(canvas);
-    document.body.appendChild(leftArrow);
-    //document.body.appendChild(leftButton);
-   // document.body.appendChild(rightButton);
-    document.body.appendChild(rightArrow);
+    document.body.appendChild(leftButton);
+    document.body.appendChild(upButton);
+    document.body.appendChild(rightButton);
+    document.body.appendChild(downButton);
     animateFrame(tick);
 };
 
@@ -201,18 +203,13 @@ window.onresize = function() {
 };
 
 var leftButton = document.createElement("button");
-var leftArrow = document.createElement("leftArrow");
-leftArrow.id = "leftArrow";
-
 leftButton.id = "leftButton";
-// var upButton = document.createElement("button");
-// upButton.id = "upButton";
+var upButton = document.createElement("button");
+upButton.id = "upButton";
 var rightButton = document.createElement("button");
-var rightArrow = document.createElement("rightArrow");
-rightArrow.id = "rightArrow";
 rightButton.id = "rightButton";
-// var downButton = document.createElement("button");
-// downButton.id = "downButton";
+var downButton = document.createElement("button");
+downButton.id = "downButton";
 
 var buttonsDown = {};
 
