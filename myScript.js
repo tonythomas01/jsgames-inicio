@@ -190,9 +190,7 @@ var render = function() {
 window.onload = function() {
     document.body.appendChild(canvas);
     document.body.appendChild(leftButton);
-    document.body.appendChild(upButton);
     document.body.appendChild(rightButton);
-    document.body.appendChild(downButton);
     animateFrame(tick);
 };
 
@@ -202,12 +200,12 @@ window.onresize = function() {
 
 var leftButton = document.createElement("button");
 leftButton.id = "leftButton";
-var upButton = document.createElement("button");
-upButton.id = "upButton";
+// var upButton = document.createElement("button");
+// upButton.id = "upButton";
 var rightButton = document.createElement("button");
 rightButton.id = "rightButton";
-var downButton = document.createElement("button");
-downButton.id = "downButton";
+// var downButton = document.createElement("button");
+// downButton.id = "downButton";
 
 var buttonsDown = {};
 
