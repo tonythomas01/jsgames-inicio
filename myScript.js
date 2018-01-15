@@ -68,12 +68,12 @@ function Box(x, y, width, height, color) {
         this.y += y;
         this.x_speed = x;
         this.y_speed = y;
-        if (this.x < (canvas.width / 3)) { // hitting the left side
-            this.x = (canvas.width / 3);
+        if (this.x < (canvas.width / 3) +23) { // hitting the left side
+            this.x = (canvas.width / 3) +23;
             this.x_speed = 0;
         }
-        else if (this.x + this.width + 80 > (canvas.width/3)*2) { // hitting the right side
-            this.x = (canvas.width/3)*2 - this.width - 80;
+        else if (this.x + this.width -20  > (canvas.width/3)*2) { // hitting the right side
+            this.x = (canvas.width/3)*2 - this.width +20;
             this.x_speed = 0;
         }
         if (this.y < 0) { // hitting the top

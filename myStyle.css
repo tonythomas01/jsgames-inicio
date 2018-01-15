@@ -35,6 +35,9 @@ button {
   border-bottom: 120px solid transparent;
   border-left: 120px solid yellow;
 }
+.green {
+  background-color: green;
+}
 
 /*#leftArrow {*/
   /*width: 0;*/
