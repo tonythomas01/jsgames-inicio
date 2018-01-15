@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+button {
+  position: fixed;
+  border: none;
+  padding: 10%;
+  margin: 1%;
+  border-radius: 50%;
+  opacity: 0.6;
+  outline: none;
+}
+
+#leftButton {
+  background-color: blue;
+  bottom: 0%;
+  left: 0%;
+}
+
+#upButton {
+  background-color: red;
+  top: 0%;
+  left: 0%;
+}
+
+#rightButton {
+  background-color: blue;
+  bottom: 0%;
+  right: 0%;
+}
+
+#downButton {
+  background-color: red;
+  right: 0%;
+  top: 0%;
+}
