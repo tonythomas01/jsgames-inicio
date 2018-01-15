@@ -9,7 +9,7 @@ var context = canvas.getContext("2d");
 var background = new Background();
 
 var player1 = new Player((canvas.width / 2) - 60,
-    (canvas.height / 2) - 190, 120, 219, "assets/topcar.png", null, "image");
+    canvas.height - 230, 120, 219, "assets/topcar.png", null, "image");
 
 
 function Player(x, y, width, height, imageSrc, color, type) {
@@ -28,7 +28,7 @@ function Player(x, y, width, height, imageSrc, color, type) {
                 this.box.move(-4, 0);
             }
             else if (button == "ArrowUp" || button == "upButton") {
-                this.box.move(0, -4);
+                // this.box.move(0, -4);
             }
             else if (button == "ArrowRight" || button == "rightArrow") {
                 this.box.move(4, 0);
