@@ -72,8 +72,8 @@ function Box(x, y, width, height, color) {
             this.x = (canvas.width / 3);
             this.x_speed = 0;
         }
-        else if (this.x + this.width + 70 > (canvas.width/3)*2) { // hitting the right side
-            this.x = (canvas.width/3)*2 - this.width - 70;
+        else if (this.x + this.width + 80 > (canvas.width/3)*2) { // hitting the right side
+            this.x = (canvas.width/3)*2 - this.width - 80;
             this.x_speed = 0;
         }
         if (this.y < 0) { // hitting the top
@@ -117,13 +117,15 @@ function Background() {
         //   //context.moveTo(0, Math.pow(i, 2));
         //   //context.lineTo(canvas.width, Math.pow(i, 2));
         // }
-        var stepSize = ((2 * canvas.width) / 30)
+        var stepSize = ((2 * canvas.width) / 30);
         context.moveTo((canvas.width / 3), 0);
-        context.lineTo((canvas.width / 3), canvas.height)
+        context.lineTo((canvas.width / 3), canvas.height);
 
         context.moveTo((canvas.width / 3)*2, 0);
-        context.lineTo((canvas.width / 3)*2, canvas.height)
+        context.lineTo((canvas.width / 3)*2, canvas.height);
 
+        context.moveTo((canvas.width / 3)*3, 0);
+        context.lineTo((canvas.width / 3)*3, canvas.height);
 
         // for (var i = 0; i < 2; i++) {
         //     context.moveTo((canvas.width / 2), 0);
