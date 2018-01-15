@@ -121,11 +121,18 @@ function Background() {
         context.moveTo((canvas.width / 3), 0);
         context.lineTo((canvas.width / 3), canvas.height);
 
+        context.moveTo((canvas.width / 3)+25, 0);
+        context.lineTo((canvas.width / 3)+25, canvas.height);
+
+
         context.moveTo((canvas.width / 3)*2, 0);
         context.lineTo((canvas.width / 3)*2, canvas.height);
 
-        context.moveTo((canvas.width / 3)*3, 0);
-        context.lineTo((canvas.width / 3)*3, canvas.height);
+        context.moveTo(((canvas.width / 3)*2) +25, 0);
+        context.lineTo(((canvas.width / 3)*2) +25, canvas.height);
+
+        // context.moveTo((canvas.width / 3)*3, 0);
+        // context.lineTo((canvas.width / 3)*3, canvas.height);
 
         // for (var i = 0; i < 2; i++) {
         //     context.moveTo((canvas.width / 2), 0);
@@ -154,8 +161,8 @@ function Background() {
         context.fillStyle = "Black";
         // context.fillRect(0, 0, canvas.width, (canvas.height / 2));
         context.beginPath();
-        context.moveTo(0, middelY);
-        context.lineTo(canvas.width, middelY);
+        //context.moveTo(0, middelY);
+        //context.lineTo(canvas.width, middelY);
         context.strokeStyle = "cyan";
         context.shadowBlur = 15;
         context.shadowColor = "deepskyblue";
